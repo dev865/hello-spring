@@ -1,5 +1,6 @@
 package com.kimyounghan.hellospring.config;
 
+import com.kimyounghan.hellospring.aop.TimeTraceAop;
 import com.kimyounghan.hellospring.repository.JDBCTemplateMemberRepository;
 import com.kimyounghan.hellospring.repository.JdbcMemberRepository;
 import com.kimyounghan.hellospring.repository.MemberRepository;
@@ -24,6 +25,11 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository());
     }
+//
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 
     @Bean
     public MemberRepository memberRepository() {
