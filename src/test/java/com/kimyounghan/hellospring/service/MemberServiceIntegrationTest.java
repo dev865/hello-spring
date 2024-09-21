@@ -2,9 +2,6 @@ package com.kimyounghan.hellospring.service;
 
 import com.kimyounghan.hellospring.domain.Member;
 import com.kimyounghan.hellospring.repository.MemberRepository;
-import com.kimyounghan.hellospring.repository.MemoryMemberRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -51,14 +48,6 @@ class MemberServiceIntegrationTest {
 
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 
-//        try {
-//            memberService.join(member2);
-//            fail(" 예외가 발생해야 합니다");
-//        } catch (IllegalStateException e) {
-//            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다. 12512515125");
-//        }
-
-        // then
     }
 
     @Test

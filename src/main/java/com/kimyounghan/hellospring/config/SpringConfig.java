@@ -1,5 +1,6 @@
 package com.kimyounghan.hellospring.config;
 
+import com.kimyounghan.hellospring.repository.JDBCTemplateMemberRepository;
 import com.kimyounghan.hellospring.repository.JdbcMemberRepository;
 import com.kimyounghan.hellospring.repository.MemberRepository;
 import com.kimyounghan.hellospring.repository.MemoryMemberRepository;
@@ -27,7 +28,8 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JDBCTemplateMemberRepository(dataSource);
     }
 
 
